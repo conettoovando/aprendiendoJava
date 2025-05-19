@@ -1,7 +1,11 @@
 package recursos;
 
-public class Base {
-    public String name;
+public abstract class Base {
+    String name;
+
+    public Base(String name) {
+        this.name = name;
+    }
 
     public String getName(){
         return this.name;
@@ -10,4 +14,10 @@ public class Base {
     public void setName(String name){
         this.name = name;
     }
+
+    public final String miMetodo() {
+        return "Hola mundo";
+    }
+
+    public abstract void guardar();
 }
